@@ -1,3 +1,6 @@
+import random
+#
+#
 # age = 25
 #
 # print(age > 5)
@@ -66,38 +69,38 @@
 # print("Пароль принят.")
 
 
-def summ(a, b):
-    summ = a + b
-    return summ
-
-
-def raz(a, b):
-    raz = a - b
-    return raz
-
-
-def de(a, b):
-    de = a / b
-    return de
-
-
-def ymn(a, b):
-    ymn = a * b
-    return ymn
-
-
-a = int(input("Введите 1-ое число -  "))
-b = int(input("Введите 2-ое число -  "))
-z = input("Введите знак -  ")
-
-zz = {
-    "+": summ(a, b),
-    '-': raz(a, b),
-    '/': de(a, b),
-    '*': ymn(a, b)
-}
-
-print(zz.get(z))
+# def summ(a, b):
+#     summ = a + b
+#     return summ
+#
+#
+# def raz(a, b):
+#     raz = a - b
+#     return raz
+#
+#
+# def de(a, b):
+#     de = a / b
+#     return de
+#
+#
+# def ymn(a, b):
+#     ymn = a * b
+#     return ymn
+#
+#
+# a = int(input("Введите 1-ое число -  "))
+# b = int(input("Введите 2-ое число -  "))
+# z = input("Введите знак -  ")
+#
+# zz = {
+#     "+": summ(a, b),
+#     '-': raz(a, b),
+#     '/': de(a, b),
+#     '*': ymn(a, b)
+# }
+#
+# print(zz.get(z))
 
 # first_number = int(input('Первое число: '))
 # sign = input('Введите знак: ')
@@ -114,3 +117,20 @@ print(zz.get(z))
 #
 # if sign == '/':
 #     print(first_number / second_number)
+try:
+    n = int(input('ВВедите длинну '))
+    lst = [random.randint(0, 100) for elem in range(n)]
+    print(lst)
+
+    iterator = iter(lst)
+
+    for i in range(n + 1):
+        try:
+            print(next(iterator))
+
+        except StopIteration as e:
+            print("Итератор закончился! ")
+            break
+except:
+    print("Invalid Input")
+
