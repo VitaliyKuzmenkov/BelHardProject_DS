@@ -4,27 +4,27 @@
         "Date": "2023-04-04",
         "Model": "BMW",
         "Mark": "IX",
-        "Power": "250"
+        "Power": "400"
     },
     "2023-04-05": {
         "": "1",
         "Date": "2023-04-05",
         "Model": "AUDI",
         "Mark": "e - tron",
-        "Power": "200"
+        "Power": "500"
     },
     "2023-04-06": {
         "": "2",
         "Date": "2023-04-06",
         "Model": "Tesla",
         "Mark": "Model X",
-        "Power": "350"
+        "Power": "600"
     },
     "2023-04-07": {
         "": "3",
         "Date": "2023-04-07",
         "Model": "Mersedes",
         "Mark": "EQC",
-        "Power": "450"
+        "Power": "700"
     }
 }
