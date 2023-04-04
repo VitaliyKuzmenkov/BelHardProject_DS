@@ -5,23 +5,14 @@
 """
 
 from random import randint
-import csv
-import pandas as pd
+import itertools
 
-with open('task_5_3_1.txt', 'w+') as txtfile:
-    data_num = str([randint(0, 10) for i in range(15)])
-    txtfile.write(data_num)
-
-with open('task_5_3_1.csv', 'w+') as csvfile:
-    df = pd.read_csv('task_5_3_1.txt', sep=',')
-    df.to_csv('task_5_3_1.csv')
-
-    print('DataFrame\n----------')
-    print(df)
-    mean = df.mean()
-    print('\nMean\n------')
-    print(mean)
-    median = df.median ()
-    print('\n Median \n------')
-    print(median)
+with open('task_5_3_1.txt', 'w') as file:
+    data_num = [randint(0, 10) for i in range(10)]
+    file.write(str(data_num))
+    data_comb = list(itertools.combinations(data_num, 2))
+    data_str = str(data_comb)
+    print(data_str)
+    with open('task_5_3_1new.txt', 'w') as file_new:
+        file_new.write(data_str)
 
