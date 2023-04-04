@@ -9,10 +9,10 @@ import json
 with open('automobile.csv', 'w') as csvfile:
     columns = ['Date', 'Model', 'Mark', 'Power']
     data = [
-        ['2023-04-04', 'BMW', 'IX', 250],
-        ['2023-04-05', 'AUDI', 'e - tron', 200],
-        ['2023-04-06', 'Tesla', 'Model X', 350],
-        ['2023-04-07', 'Mersedes', 'EQC', 450]
+        ['2023-04-04', 'BMW', 'IX', 400],
+        ['2023-04-05', 'AUDI', 'e - tron', 500],
+        ['2023-04-06', 'Tesla', 'Model X', 600],
+        ['2023-04-07', 'Mersedes', 'EQC', 700]
     ]
 
     df = pd.DataFrame(data, columns=columns)
@@ -20,7 +20,7 @@ with open('automobile.csv', 'w') as csvfile:
     print('DataFrame\n----------')
     print(df)
     mean = df['Power'].mean()
-    print('\nMean\n------')
+    print('\nСреднее значение для Power\n------')
     print(mean)
 
 mydata = {}
