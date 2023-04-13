@@ -12,14 +12,25 @@ import openpyxl
 
 
 df = pd.read_csv('6_class_csv.csv')
-df_info = df.info()
-df_new = pd.DataFrame(df_info)
 print(df.describe())
 print(df.describe().transpose())
+df_dict = {}
 print(df.info())
+for col in df.columns:
+    df_dict = pd.DataFrame(df, index=[0])
+    df.to_csv('6_class_csv_new.csv')
 
-with open('6_class_csv_new.csv', 'w+') as csvfile:
-    df_new.to_csv(r'6_class_csv_new.csv')
+mydata = {}
+with open('6_class_csv_new.csv', 'w+') as csv_file:
+    csvRead = csv.DictReader(csv_file)
+    for rows in csvRead:
+        mykey = rows['dtypes']
+        mydata[mykey] = rows
+
+        with open('6_class_csv_new.json', 'w+', encoding='utf-8') as jsonfile:
+            jsonfile.write(json.dumps(mydata, indent=4))
+
+print(mydata)
 
 
 """Вычислить среднее значение колонки и добавить новую Temperature 
@@ -40,8 +51,8 @@ df_new = df[(df['delta_T'] <= max_temp/2) & (df['Temperature (K)'] >= mean_temp_
 print(df_new)
 print(df)
 
-with open('6_class_csv_new.csv', 'w+') as csvfile:
-    df_new.to_csv(r'6_class_csv_new.csv')
+with open('6_class_csv_tempr.csv', 'w+') as csvfile:
+    df_new.to_csv(r'6_class_csv_tempr.csv')
 
 """Вычислить коэффициент корреляции датафрейма Вычислить . 
 среднее значение для каждого Absolute magnitude(Mv) Star type. 
