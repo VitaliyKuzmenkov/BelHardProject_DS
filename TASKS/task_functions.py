@@ -17,6 +17,30 @@ def input_log_and_password():
 
 input_log_and_password()
 
+# from time import time, sleep
+#
+#
+# def decorator(func):
+#     def wrapper(*args, **kwargs):
+#         print(f'RUN {func.__name__}; args {args}; kwargs {kwargs}')
+#         start_time = time()
+#         print(f'{start_time}')
+#         result = func(*args, **kwargs)
+#         print(f'Выполнено {func.__name__}')
+#         end_time = time() - start_time
+#         print(f'Время окончания {end_time}')
+#         print(f'Всего затрачено времени Х{end_time - start_time}')
+#         return result
+#     return wrapper
+#
+#
+# def class_decor(cls):
+#     call_attr = {k: v for k, v in cls.__dict__.items() if callable(v)}
+#
+#     for name, func in call_attr.items():
+#         dec_func = decorator(func)
+#         setattr(cls, name, dec_func)
+#     return cls
 
 """task_2"""
 
